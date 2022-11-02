@@ -1,0 +1,10 @@
+{
+    "name": "AutoPhone",
+    "main": "main.js",
+    "ignore": [
+        "build"
+    ],
+    "packageName": "com.auto.phone",
+    "versionName": "1.0.0",
+    "versionCode": 1
+}
