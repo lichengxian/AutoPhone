@@ -1,2 +1,2 @@
 # AutoPhone
-基于AutoJs4.1免费版本的手机自动化脚本
+基于Autox.js的手机自动化脚本
