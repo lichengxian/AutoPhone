@@ -1,4 +1,4 @@
-let {
+const {
   widgetOpt,
   widgetEnsure,
   killApp,
@@ -27,10 +27,10 @@ SignInQQSG.prototype.openLoginPage = function () {
 SignInQQSG.prototype.login = function (username, password) {
   return new Promise((resolve) => {
     this.widget = widgetEnsure(
-      className("android.view.View").depth(8).indexInParent(1)
+      className("android.view.View").depth(13).indexInParent(1)
     ); // 确保界面正确
     this.widget = className("android.widget.EditText")
-      .depth(11)
+      .depth(16)
       .clickable(true)
       .untilFind();
     widgetOpt(this.widget[0], "账号输入", "setText", username);
@@ -48,7 +48,7 @@ SignInQQSG.prototype.signIn = function () {
     this.widget = text("javascript:closeDialog();").findOne(cfg.timeout);
     if (this.widget) widgetOpt(this.widget, "关闭签到", "click"); // 确认签到
     else {
-      this.widget = widgetEnsure(text("确定").depth(1).clickable(true));
+      this.widget = widgetEnsure(text("确定").depth(5).clickable(true));
       widgetOpt(this.widget, "已经签到", "click"); // 已经签到
     }
     this.widget = widgetEnsure(text("注销"));
